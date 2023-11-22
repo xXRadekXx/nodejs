@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+</head>
+<body>
+    <table>
+        <% for(var i=0; i < result.length; i++) { %>
+          <tr>
+            <td>
+              <%= result[i].ID %>
+            </td>
+            <td>
+              <%= result[i].First_Name %>
+            </td>
+            <td>
+              <%= result[i].Last_Name %>
+            </td>
+            <td>
+              <%= result[i].Age %>
+            </td>
+          </tr>
+          <% } %>
+      </table>
+</body>
+</html>
