@@ -25,20 +25,19 @@ con.connect(function(err) {
   console.log("Connected!");
 });
 
-app.get('/createuser', (req, res) => {//home routa
-    
+app.get('/newuser2', (req, res) => {//home routa
 
   
   res.render('newuser');
 
 })
 
-app.post('/createuser', function (request, response, next) {
+app.post('/newuser', function (request, response, next) {
   console.log(request.body)
     // SQL dotaz pro vložení dat do databáze
-    var sql = `INSERT INTO rawr (fname, lname, age) VALUES ('${request.body.fname}', '${request.body.lname}','${request.body.age}')`;
+    var sql = `INSERT INTO rawr (First_Name, Last_Name, Age) VALUES ('${request.body.fname}','${request.body.lname}',${request.body.age})`;
    
-    connection.query(sql, (error, results, fields) => {
+    con.query(sql, (error, results, fields) => {
       if (error) {
         console.error(error);
         return;
@@ -54,10 +53,10 @@ app.get('/', (req, res) => {//home routa
 
     con.connect(function(err) {
         if (err) throw err;
-        con.query("SELECT * FROM rawr", function (err, result, fields) {
+        con.query("SELECT * FROM rawr", function (err, results, fields) {
           if (err) throw err;
-          console.log(result);
-          res.render('index', { result });
+          //console.log(results);
+          res.render('index', { results });
         });
       });
 
