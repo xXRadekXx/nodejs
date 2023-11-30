@@ -1,20 +1,80 @@
 table {
-width: 100%;
-border-collapse: collapse;
-}
+    border-collapse: collapse;
+    width: 100%;
+  }
 
-th, td {
-border:1px solid black;
-padding: 10px;
-text-align: center;
-}
+  th, td {
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 5px;
+  }
 
-th {
-    background-color:seagreen;
-    font-weight: bold;
-}
+  th {
+    background: linear-gradient(to right, #0f3f99, #00c48c);
+    color: rgb(0, 0, 0);
+  }
 
-th { 
-    font-style: italic;
-    font-size: medium;
-}
+  tr:nth-child(even) {
+    background: linear-gradient(to right, #4e8cff, #00c48c);
+    color: white;
+  }
+
+  tr:nth-child(odd) {
+    background: linear-gradient(to right, #4e8cff, #00c48c);
+  }
+
+/*
+table: Nastavuje, že se hrany buněk v tabulce mají slévat.
+th, td: Definuje vzhled pro buňky v záhlaví (th) a datové buňky (td).
+th: Nastavuje pozadí záhlaví tabulky na lineární gradient od #0f3f99 k #00c48c, textovou barvu na černou.
+tr:nth-child(even): Nastavuje lichým řádkům pozadí tabulky na lineární gradient od #4e8cff k #00c48c a bílou textovou barvu.
+tr:nth-child(odd): Nastavuje sudým řádkům pozadí tabulky na stejný lineární gradient.
+*/
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #3498db;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+
+  tr:nth-child(even) {
+    background-color: #ecf0f1;
+  }
+
+  tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+  }
+
+  tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+  }
+
+  /*
+  Opět jsou nastaveny vlastnosti pro table, tentokrát s větším okrajem, stínem a kulatým rohem.
+th, td: Nastavuje větší vzdálenost mezi textem a okrajem buňky, levý textový zarovnání a spodní ohraničení buňky šedým pruhem.
+th: Nastavuje pozadí záhlaví na barvu #3498db, bílý text a kulaté rohy v horní části.
+tr:hover: Mění pozadí řádku na světle šedou při najetí myší.
+tr:nth-child(even): Nastavuje sudým řádkům světle šedé pozadí.
+tr:last-child td:first-child: Zaobluje levý dolní roh posledního řádku.
+tr:last-child td:last-child: Zaobluje pravý dolní roh posledního řádku.
+*/
