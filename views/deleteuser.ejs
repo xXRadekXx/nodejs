@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
+  <meta charset="UTF-8">
+  <title>Delete User</title>
 </head>
 <body>
-
+  <h1>Vymazání uživatele</h1>
+  <p>Jste si jisti, že chcete smazat tohoto uživatele?</p>
+  <form action="/delete" method="POST">
+    <label for="id">ID uživatele: </label>
+    <input type="number" id="id" name="ID" required>
+    <button type="submit">Smazat</button>
+  </form>
 </body>
 </html>

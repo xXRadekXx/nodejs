@@ -65,3 +65,22 @@ app.listen(port, () => {//spustni serveru
   console.log(`Example app listening on port ${port}`)
 })
 
+app.get('/deleteUser', (req, res) => {
+ 
+    res.render('deleteUser')
+ 
+  })
+ 
+  app.post('/delete', function(req,res,next){
+    var id= req.body.ID;
+    console.log(req.body.ID);
+    let sql = `DELETE FROM rawr WHERE id = '${id}'`;
+ 
+    con.query(sql, (error, results, fields) => {
+      if (error)
+        return console.error(error.message);
+ 
+      console.log('Deleted Row(s):', results.affectedRows);
+        res.redirect('/delete');
+    });
+})
