@@ -2,21 +2,26 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Delete User</title>
+  <h1>Delete User</h1>
+  <a href="/" target="_blank" rel="nofollow noopener" class="btn btn-primary">Rawr's Database</a>
+    <br>
+  <a href="/NEWuser2" target="_blank" rel="nofollow noopener" class="btn btn-primary">Vytvoření nového uživatele</a>
 </head>
 <body>
   <h1>Vymazání uživatele</h1>
   <p>Jste si jisti, že chcete smazat tohoto uživatele?</p>
   <form action="/delete" method="POST">
-    <label for="id">ID uživatele: </label>
-    <input type="number" id="id" name="ID" required>
+    <label for="Id_Student">id uživatele: </label>
+    <input type="number" ID_Student="ID_Student" name="ID_Student" required>
     <button type="submit">Smazat</button>
   </form>
   <style>
-   button {
+ button {
     background: linear-gradient(to right, #0f3f99, #00c48c);
     color: rgb(255, 255, 255);
-}
+    padding: 7px;
+    margin: 5px;
+   }
   </style>
 </body>
 </html>
