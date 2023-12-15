@@ -35,8 +35,8 @@ app.get('/newuser2', (req, res) => {//home routa
 app.post('/newuser', function (request, response, next) {
   console.log(request.body)
   // SQL dotaz pro vložení dat do databáze
-  var sql = `INSERT INTO rawr (First_Name, Last_Name, Age) VALUES ('${request.body.fname}','${request.body.lname}',${request.body.age})`;
-
+  var sql = `INSERT INTO rawr (First_Name, Last_Name, Age,) VALUES ('${request.body.fname}','${request.body.lname}',${request.body.age}})`;
+  var sql = `INSERT INTO obor (obor) VALUES ('${request.body.obor}})`;
   con.query(sql, (error, results, fields) => {
     if (error) {
       console.error(error);
@@ -53,7 +53,7 @@ app.get('/', (req, res) => {//home routa
 
   con.connect(function (err) {
     if (err) throw err;
-    con.query("SELECT * FROM rawr", function (err, results, fields) {
+    con.query("SELECT * FROM `radek.dvorak`.rawr LEFT JOIN obor ON rawr.ID_Student = idObor", function (err, results, fields) {
       if (err) throw err;
       //console.log(results);
       res.render('index', { results });

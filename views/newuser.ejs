@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <h1>Vytvoření uživatele</h1>
+  <h1>Vytvoření nového uživatele</h1>
     <a href="/" target="_blank" rel="nofollow noopener" class="btn btn-primary">Rawr's Database</a>
     <br>
     <a href="/deleteuser" target="_blank" rel="nofollow noopener" class="btn btn-primary">Smazání uživatele</a>
 </head>
 <body>
-    <h1>Vytvoření nového uživatele</h1>
-
-
+ 
     <form method="POST" action="/newuser">
 
       <label for="fname">Jméno:</label>
@@ -20,6 +18,10 @@
 
       <label for="age">Věk:</label>
       <input type="text" id="age" name="age" required>
+
+      <label for="obor">Obor:</label>
+      <input type="text" id="obor" name="obor" required>
+
       <button type="submit">Vytvořit nového uživatele</button>
     </form>
     <style>

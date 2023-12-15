@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <h1>Rawr's Database</h1>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rawr's database</title> 
-    <link rel="stylesheet" href="styles.css">
-    <a href="/NEWuser2" target="_blank" rel="nofollow noopener" class="btn btn-primary">Vytvoření nového uživatele</a>
-    <br>
-    <a href="/deleteuser" target="_blank" rel="nofollow noopener" class="btn btn-primary">Smazání uživatele</a>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rawr's database</title>
+  <link rel="stylesheet" href="styles.css">
+  <a href="/NEWuser2" target="_blank" rel="nofollow noopener" class="btn btn-primary">Vytvoření nového uživatele</a>
+  <br>
+  <a href="/deleteuser" target="_blank" rel="nofollow noopener" class="btn btn-primary">Smazání uživatele</a>
 </head>
+
 <body>
-    <table>
-      <% var cssLink = '/styles.css'; %>
-      
-        <% for(var i=0; i < results.length; i++) { %>
-          <tr>
-            <td>
-              <%= results[i].ID_Student %>
-            </td>
-            <td>
-              <%= results[i].First_Name %>
-            </td>
-            <td>
-              <%= results[i].Last_Name %>
-            </td>
-            <td>
-              <%= results[i].Age %>
-            </td>
-          </tr>
-          <% } %>
-      </table>
-      <style> 
-        table {
+  <table>
+    <% var cssLink='/styles.css' ; %>
+
+      <% for(var i=0; i < results.length; i++) { %>
+        <tr>
+          <td>
+            <%= results[i].ID_Student %>
+          </td>
+          <td>
+            <%= results[i].First_Name %>
+          </td>
+          <td>
+            <%= results[i].Last_Name %>
+          </td>
+          <td>
+            <%= results[i].Age %>
+          </td>
+          <td>
+            <%= results[i].obor %>
+          </td>
+        </tr>
+        <% } %>
+  </table>
+  
+  <style>
+    table {
       border-collapse: collapse;
       width: 100%;
     }
 
-    th, td {
+    th,
+    td {
       border: 2px solid #dddddd;
       text-align: left;
       padding: 5px;
@@ -58,7 +65,7 @@
       background: linear-gradient(to right, #4e8cff, #00c48c);
     }
 
-    
+
     table {
       border-collapse: collapse;
       width: 100%;
@@ -68,7 +75,8 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
 
-    th, td {
+    th,
+    td {
       padding: 15px;
       text-align: left;
       border-bottom: 1px solid #ddd;
@@ -96,7 +104,7 @@
     tr:last-child td:last-child {
       border-bottom-right-radius: 10px;
     }
-
   </style>
 </body>
+
 </html>
